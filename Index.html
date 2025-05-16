@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice 10,000</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        
+        <!-- Left: Scoring Rules -->
+        <aside id="scoring-rules">
+            <h2>Scoring</h2>
+            <ul>
+                <li>Single 1: 100 points</li>
+                <li>Single 5: 50 points</li>
+                <li>Three 1s: 1000 points</li>
+                <li>Three 2s: 200 points</li>
+                <li>Three 3s: 300 points</li>
+                <li>Three 4s: 400 points</li>
+                <li>Three 5s: 500 points</li>
+                <li>Three 6s: 600 points</li>
+                <li>4 of a kind = x2, 5 = x4, 6 = x8</li>
+                <li>Straight (1–6): 1000 points</li>
+                <li>Three Pairs: 1000 points</li>
+                <li>Full House: 1500 points</li>
+                <p><em>* 3, 4, 5, and 6 of a kind MUST be rolled together *</em></p>
+            </ul>
+        </aside>
+
+        <!-- Center: Game UI -->
+        <main id="game-area">
+            <h1>Dice 10,000</h1>
+
+            <!-- Player Info -->
+            <div id="player-info">
+                <p id="current-player">Current Player: Player 1</p>
+            </div>
+            
+            <!-- Dice Tray -->
+            <div id="dice-tray">
+                <p>Dice Rolls (Click dice to select for scoring):</p>
+                <div id="dice-container"></div>
+            </div>
+            
+            <!-- Selected Dice Area -->
+            <div id="selected-dice-tray">
+                <p>Selected Dice:</p>
+                <div id="selected-dice-container"></div>
+            </div>
+            
+            <!-- Potential Points Display -->
+            <p id="potential-points">Potential Points: 0</p>
+            
+            <!-- Buttons -->
+            <div id="controls">
+                <button id="roll-dice">Roll Dice</button>
+                <button id="end-turn">End Turn</button>
+            </div>
+            
+            <!-- Game Message -->
+            <p id="message"></p>
+
+        </main>
+
+        <!-- Right: Score Tally -->
+        <aside id="score-tally">
+            <h2>Score Tally</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Turn</th>
+                        <th>Player 1</th>
+                        <th>Player 2</th>
+                    </tr>
+                </thead>
+                <tbody id="score-log">
+                    <!-- JS appends rows here -->
+                </tbody>
+            </table>
+        </aside>
+    </div>
+
+    <!-- Game Script -->
+    <script src="Game.js"></script>
+</body>
+</html>
